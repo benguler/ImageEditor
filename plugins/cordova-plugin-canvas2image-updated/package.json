@@ -1,0 +1,69 @@
+{
+  "_from": "cordova-plugin-canvas2image-updated",
+  "_id": "cordova-plugin-canvas2image-updated@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-AB9OcZYgAtC44XPZq4/noSumG6a+gH4i7z7Cg/0DAFX77hImjFWrBXDdZdCqsHqT7KupPyvKZsjJPkUdYq9cIA==",
+  "_location": "/cordova-plugin-canvas2image-updated",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-canvas2image-updated",
+    "name": "cordova-plugin-canvas2image-updated",
+    "escapedName": "cordova-plugin-canvas2image-updated",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-canvas2image-updated/-/cordova-plugin-canvas2image-updated-1.2.0.tgz",
+  "_shasum": "a50b558a79cd17cb39ad23c2ba266671bb131ccd",
+  "_spec": "cordova-plugin-canvas2image-updated",
+  "_where": "C:\\Users\\relug\\Desktop\\ImageEditor_v0.4",
+  "author": {
+    "name": "Rodrigo Graça",
+    "email": "rodrigograca31@gmail.com",
+    "url": "https://rodrigograca.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/rodrigograca31/Canvas2ImagePlugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-canvas2image-updated",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin allows you to save the contents of an HTML canvas tag to the iOS Photo Library, or Android Gallery from your app.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/rodrigograca31/Canvas2ImagePlugin#readme",
+  "keywords": [
+    "canvas",
+    "image",
+    "photo library",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-wp8",
+    "cordova"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-canvas2image-updated",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigograca31/Canvas2ImagePlugin.git"
+  },
+  "version": "1.2.0"
+}

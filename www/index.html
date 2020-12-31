@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' http://code.jquery.com 'unsafe-inline'; style-src 'self' http://code.jquery.com 'unsafe-inline'; img-src * 'self' data: https:;  media-src * 'self' data: https:;" />
+        
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="./js/pico.js"></script>    <!--Pico library. Limited, but runs client side-->
+
+        <style>
+            .form-popup {
+                position: fixed;
+                top: 20%;
+                left: 0;
+                z-index: 20;
+                border: 3px solid #A9A9A9;
+                
+            }
+
+            .form-container {    
+                padding: 10px;
+                background-color: white;
+                
+            }
+            
+        </style>
+    
+        
+    </head>
+    
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h1>Image Editor</h1>
+            </div> <!-- header -->
+            <div data-role="main" class="ui-content" id="deviceready">
+                
+                <canvas id = "canvas" width = 0 height=0></canvas>
+                
+                <button onclick="openCamera()" id="btnCamera">Open Camera</button>
+                
+                <button onclick="uploadPic()" id="btnUpload">Upload Image</button>
+                
+                <select id="filters">
+                    <option value="NONE">No Filter</option>
+                    
+                    <option value="./img/filters/mask.png">Luchador</option>
+                    <option value="./img/filters/glasses.png">Shades</option>
+                    <option value="./img/filters/red-nose.png">Clown Nose</option>
+                    <option value="./img/filters/cat.png">Kitty</option>
+                    <option value="./img/filters/mustache.png">Mustache</option>
+                    <option value="./img/filters/censored.png">Anonymous</option>
+                    
+                </select>
+                
+                <button onclick="openForm()" id="btnAddFilter">Add Filter</button>
+                
+                <button onclick="processImage()" id="btnProcess">Process Image</button>
+                
+                <button onclick="saveImage()" id="btnSave">Save Image</button>
+                
+                <div class="form-popup" id="frmFilter">
+                    <form class="form-container">
+                        <h1>Add Filter</h1>
+                        
+                        <label for="name"><b>Filter Name</b></label>
+                        <input type="text" placeholder="Enter Name" name="name" id = "txtFltrName">
+                            
+                            
+                        <label for="link"><b>File Link</b></label>
+                        <input type="text" placeholder="Enter Link" name="link" id = "txtFltrLink">
+                            
+                        
+                            
+                        <button type="button" onClick = "localFilter()" id = "btnUpFilter">Upload Local Image</button>
+                        <button type="button" onClick = "addFilter()" id = "btnSubmit">Submit</button>
+                        <button type="button" onClick = "closeForm()" id = "btnCancel">Cancel</button>
+                            
+                            
+                        
+                    </form>
+                </div>
+                
+            </div> <!-- main -->
+            <div data-role="footer">
+                <p>Jing/Ben - Mobile App Programming II</p>
+            </div>
+            
+        </div> <!-- page -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+            
+        </script>
+    </body>
+</html>
